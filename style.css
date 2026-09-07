@@ -580,3 +580,94 @@ section {
         height: 350px;
     }
 }
+
+/* =========================
+   BOOKING FORM
+========================= */
+
+.booking-form {
+    max-width: 600px;
+
+    margin: 50px auto 0;
+
+    padding: 35px;
+
+    background: #1d1d1d;
+
+    border: 1px solid #333;
+
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.booking-form h3 {
+    margin: 0 0 10px;
+
+    font-size: 26px;
+}
+
+.booking-form input,
+.booking-form select {
+    width: 100%;
+
+    padding: 15px;
+
+    background: #111;
+
+    color: white;
+
+    border: 1px solid #444;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+.booking-form input:focus,
+.booking-form select:focus {
+    border-color: #aaa;
+}
+
+.booking-form button {
+    padding: 15px;
+
+    background: white;
+
+    color: black;
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.booking-form button:hover {
+    transform: translateY(-3px);
+
+    background: #ddd;
+
+    box-shadow: 0 10px 25px rgba(255,255,255,0.12);
+}
+
+#formMessage {
+    margin: 5px 0 0;
+
+    color: #aaa;
+
+    font-size: 14px;
+}
