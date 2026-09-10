@@ -1,0 +1,673 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #111;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 60px;
+
+    background: rgba(17, 17, 17, 0.95);
+    border-bottom: 1px solid #333;
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.nav {
+    display: flex;
+    gap: 10px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+
+    padding: 10px 16px;
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    background: white;
+    color: black;
+}
+
+.menu-button {
+    display: none;
+
+    background: white;
+    color: black;
+
+    border: none;
+    border-radius: 8px;
+
+    padding: 10px 14px;
+    font-size: 22px;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 700px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 100px 20px;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.8)
+        ),
+        url("images/barbershop.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-small {
+    font-size: 14px;
+    letter-spacing: 4px;
+    color: #aaa;
+}
+
+.hero h1 {
+    font-size: 70px;
+    line-height: 1.05;
+    margin: 20px 0;
+}
+
+.hero-text {
+    max-width: 600px;
+    margin: 0 auto 35px;
+
+    font-size: 20px;
+    line-height: 1.6;
+
+    color: #ccc;
+}
+
+.hero-button,
+.contact-button {
+    display: inline-block;
+
+    padding: 15px 30px;
+
+    background: white;
+    color: black;
+
+    border: none;
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.hero-button:hover,
+.contact-button:hover {
+    transform: translateY(-5px) scale(1.03);
+    background: #ddd;
+
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.15);
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+section {
+    padding: 100px 20px;
+}
+
+.section-label {
+    margin: 0 0 15px;
+
+    color: #aaa;
+
+    font-size: 14px;
+    letter-spacing: 4px;
+}
+
+section h2 {
+    margin: 0 0 25px;
+
+    font-size: 45px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    text-align: center;
+    background: #181818;
+}
+
+.section-text {
+    max-width: 700px;
+
+    margin: auto;
+
+    color: #bbb;
+
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services {
+    text-align: center;
+}
+
+.services-container {
+    max-width: 1100px;
+
+    margin: 50px auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.service-card {
+    padding: 35px 25px;
+
+    background: #1d1d1d;
+
+    border: 1px solid #333;
+    border-radius: 15px;
+
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+
+    border-color: #777;
+
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.service-card h3 {
+    font-size: 22px;
+}
+
+.service-card p {
+    color: #aaa;
+    line-height: 1.6;
+}
+
+.service-card span {
+    display: block;
+
+    margin-top: 25px;
+
+    font-size: 24px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.service-card:hover span {
+    transform: scale(1.08);
+}
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery {
+    text-align: center;
+    background: #111;
+}
+
+.gallery-container {
+    max-width: 1200px;
+
+    margin: 50px auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.gallery-item {
+    aspect-ratio: 3 / 4;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    background: #222;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.3);
+
+    transition: 0.3s;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center top;
+
+    display: block;
+
+    transition: 0.4s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   TEAM
+========================= */
+
+.team {
+    text-align: center;
+    background: #181818;
+}
+
+.team-container {
+    max-width: 1000px;
+
+    margin: 50px auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.barber-card {
+    padding: 25px;
+
+    background: #222;
+
+    border-radius: 15px;
+
+    transition: 0.3s;
+}
+
+.barber-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.35);
+}
+
+.barber-photo {
+    height: 300px;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.barber-photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: 0.4s;
+}
+
+.barber-photo img:hover {
+    transform: scale(1.08);
+}
+
+.barber-card p {
+    color: #aaa;
+}
+
+
+/* =========================
+   CONTACTS
+========================= */
+
+.contacts {
+    text-align: center;
+}
+
+.contacts > p:not(.section-label) {
+    color: #aaa;
+    font-size: 18px;
+}
+
+.contact-info {
+    max-width: 600px;
+
+    margin: 35px auto;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.contact-info p {
+    margin: 0;
+
+    padding: 15px 20px;
+
+    background: #1d1d1d;
+
+    border: 1px solid #333;
+
+    border-radius: 10px;
+
+    color: #ccc;
+
+    transition: 0.3s;
+}
+
+.contact-info p:hover {
+    transform: translateY(-3px);
+
+    border-color: #777;
+}
+
+.contact-info a {
+    color: #ccc;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.contact-info a:hover {
+    color: white;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 40px 20px;
+
+    text-align: center;
+
+    background: #080808;
+
+    border-top: 1px solid #333;
+}
+
+footer p {
+    color: #777;
+}
+
+
+/* =========================
+   ANIMATION
+========================= */
+
+section {
+    animation: fadeUp 0.8s ease both;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .header {
+        padding: 15px 20px;
+    }
+
+    .nav {
+        display: none;
+
+        position: absolute;
+
+        top: 100%;
+        left: 0;
+
+        width: 100%;
+
+        padding: 15px;
+
+        background: #111;
+
+        flex-direction: column;
+
+        border-bottom: 1px solid #333;
+    }
+
+    .nav.show {
+        display: flex;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 600px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero-text {
+        font-size: 17px;
+    }
+
+
+    /* SECTIONS */
+
+    section {
+        padding: 70px 20px;
+    }
+
+    section h2 {
+        font-size: 35px;
+    }
+
+
+    /* SERVICES */
+
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* GALLERY */
+
+    .gallery-container {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item {
+        aspect-ratio: 3 / 4;
+    }
+
+
+    /* TEAM */
+
+    .team-container {
+        grid-template-columns: 1fr;
+    }
+
+    .barber-photo {
+        height: 350px;
+    }
+}
+
+/* =========================
+   BOOKING FORM
+========================= */
+
+.booking-form {
+    max-width: 600px;
+
+    margin: 50px auto 0;
+
+    padding: 35px;
+
+    background: #1d1d1d;
+
+    border: 1px solid #333;
+
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.booking-form h3 {
+    margin: 0 0 10px;
+
+    font-size: 26px;
+}
+
+.booking-form input,
+.booking-form select {
+    width: 100%;
+
+    padding: 15px;
+
+    background: #111;
+
+    color: white;
+
+    border: 1px solid #444;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+.booking-form input:focus,
+.booking-form select:focus {
+    border-color: #aaa;
+}
+
+.booking-form button {
+    padding: 15px;
+
+    background: white;
+
+    color: black;
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.booking-form button:hover {
+    transform: translateY(-3px);
+
+    background: #ddd;
+
+    box-shadow: 0 10px 25px rgba(255,255,255,0.12);
+}
+
+#formMessage {
+    margin: 5px 0 0;
+
+    color: #aaa;
+
+    font-size: 14px;
+}
